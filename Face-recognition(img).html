@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="scriptFace-recognition(img).js"></script>
+  <title>Face Recognition</title>
+  <style>
+    body {
+      background-image:linear-gradient(to right,#ff5722,#ff9800);
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    input {
+      background-color: darkgrey;
+      border-radius: 10px;
+      height: wrap;
+      font-size: 10pt;
+
+      
+    }
+    p{
+      font-size: 20px;
+      font-family: fantasy;
+    }
+  </style>
+</head>
+<body>
+  <p>welcome to face recognizer app</p>
+  <div>click 'choose file' to start</div>
+  <input type="file" id="imageUpload">
+</body>
+</html>
