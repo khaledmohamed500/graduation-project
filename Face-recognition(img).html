@@ -8,40 +8,110 @@
   <script defer src="scriptFace-recognition(img).js"></script>
   <title>Face Recognition</title>
   <style>
-    body {
-      background-image:linear-gradient(to right,#ff5722,#ff9800);
-      margin: 0;
-      padding: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column
+     body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #031321;
+  font-family: consolas;
+  flex-direction: column;
+}
+canvas{
+  position: absolute;
+  top:0;
+  left:0;
+}
+ input {background-color: darkgray;
+  border-radius: 200px
+ }
+ div{
+        color:white;
+      }
+a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+a:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+a span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#2196f3);
+}
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#2196f3);
+}
+a:hover span:nth-child(3) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#2196f3);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#2196f3);
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
     }
 
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    input {
-      background-color: darkgrey;
-      border-radius: 10px;
-      height: wrap;
-      font-size: 10pt;
-
-      
-    }
-    p{
-      font-size: 20px;
-      font-family: fantasy;
-    }
   </style>
 </head>
 <body>
-  <p>welcome to face recognizer app</p>
-  <div>click 'choose file' to start</div>
+  <div>CLICK 'choose file' TO START</div>
+  <a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
   <input type="file" id="imageUpload">
+</a>
 </body>
 </html>
